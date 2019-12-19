@@ -1,3 +1,20 @@
-p {
-  color: green;
-}
+@charset "UTF-8";
+
+/*
+* style.css
+*
+*/
+
+// Common Settings
+@import "_partials/setting";
+@import "_partials/function";
+@import "_partials/sprite-common";
+@import "_partials/mixin";
+@import "_partials/reset";
+@import "_partials/base";
+@import "_partials/utilities";
+@import "_partials/components";
+@import "_partials/project";
+
+// Print Settings
+@import "_partials/print";
