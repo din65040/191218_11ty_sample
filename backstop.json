@@ -2,6 +2,11 @@
   "id": "backstop_default",
   "viewports": [
     {
+      "label": "Tablet view",
+      "width": 768,
+      "height": 1024
+    },
+    {
       "label": "PC view",
       "width": 1024,
       "height": 768
@@ -21,7 +26,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",
-      "clickSelector": "",
+      "clickSelector": ".content_summary",
       "postInteractionWait": 0,
       "selectors": [],
       "selectorExpansion": true,

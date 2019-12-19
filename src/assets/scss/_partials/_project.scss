@@ -10,18 +10,36 @@
 
 .content_ttl {
   font-size: 20px;
+  letter-spacing: 2px;
 }
 
 .content_author {
   margin-bottom: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .content_autherImg {
   float: right;
-  margin: 10px;
+  margin: 10px 10px 10px 30px;
 }
 
 .content_txt {
   margin-bottom: 10px;
 }
 
+.content_summary {
+  display: block;
+  width: 300px;
+  border-bottom: 1px solid #000;
+}
+
+.content_detail {
+  margin-bottom: 10px;
+}
+
+.content_detail[open] {
+    .content_summary {
+      display: none;
+    }
+}
