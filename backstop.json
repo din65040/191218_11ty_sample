@@ -18,12 +18,18 @@
     {
       "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://10.0.1.23:8080/",
+      "url": "http://localhost:8080",
       "referenceUrl": "",
+      "keyPressSelectors": [
+        {
+          "selector": ".inputForm",
+          "keyPress": "marcdacz@backstopjs.com"
+        }
+      ],
       "readyEvent": "",
       "readySelector": "",
       "delay": 0,
-      "hideSelectors": [],
+      "hideSelectors": [".content_summary"],
       "removeSelectors": [],
       "hoverSelector": "",
       "clickSelector": ".content_summary",
@@ -31,7 +37,7 @@
       "selectors": [],
       "selectorExpansion": true,
       "expect": 0,
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold" : 0.05,
       "requireSameDimensions": true
     }
   ],

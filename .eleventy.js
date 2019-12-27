@@ -1,6 +1,6 @@
 module.exports = {
   dir: {
-    input: "src",
+    input: "src/pages",
     output: "dist"
   },
   templateFormats: ["md", "njk"]
