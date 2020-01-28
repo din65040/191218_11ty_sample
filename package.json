@@ -4,20 +4,16 @@
     "clean/css": "rimraf dist/assets/css && mkdir -p dist/assets/css",
     "clean/js": "rimraf dist/js && mkdir -p dist/js",
     "clean/images": "rimraf dist/assets/images && midir -p dist/assets/images",
-
     "html/eleventy": "eleventy",
-
     "css/sass": "node-sass src/assets/scss/style.scss -o dist/assets/css --output-style expanded --source-map dist/assets/css",
     "css/postcss": "postcss dist/assets/css/style.css -o dist/assets/css/style.min.css",
     "css": "npm run clean/css && npm-run-all -p css/*",
-
     "build:js": "mkdirp dist/js && browserify -t babelify src/js/main.js | uglifyjs -c -m > dist/js/main.js",
     "js/rollup": "rollup src/assets/js/index.js -c=rollup.config.js",
     "js/uglifyjs": "uglifyjs dir/assets/js/index.js -o dir/assets/js/index.min.js",
     "js": "npm run clean/js && npm-run-all -s js/*",
     "build:images": "imagemin src/images/* -o dist/images",
     "images": "npm run clean/images && npm-run-all -s images/*",
-
     "watch/server": "eleventy --serve",
     "watch/css": "watch 'npm run css' ./src/assets/scss",
     "watch": "npm-run-all -p watch/*"
@@ -29,17 +25,17 @@
     "not dead"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "autoprefixer": "^9.7.3",
     "babelify": "^10.0.0",
     "backstopjs": "^4.4.2",
-    "browserify": "^16.5.0",
     "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
     "cssnano": "^4.1.10",
-    "imagemin-cli": "^5.1.0",
     "imagemin": "^7.0.1",
+    "imagemin-cli": "^5.1.0",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-keep-folder": "^5.3.2",
     "imagemin-mozjpeg": "^8.0.0",
