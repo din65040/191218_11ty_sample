@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "page_1",
+    "title": "pageTitle_1",
+    "update": "2020.01.15",
+    "content": "グローバルデータとしてcontent.jsonを用意しました。中身はページのURL, タイトル, 日付, コンテンツの内容としています。"
+  },
+  {
+    "slug": "page_2",
+    "title": "pageTitle_2",
+    "update": "2020.01.17",
+    "content": "記事に記載されているpermalinkの指定方法だと、11tyの仕様上 各content.slugディレクトリ以下にindex.htmlファイルが生成されます。front-matterで.htmlを記述することで pagination/{{ content.slug }}.html といった形でpagination以下にURLの異なるページを生成することができます。"
+  },
+  {
+    "slug": "page_3",
+    "title": "pageTitle_3",
+    "update": "2020.<br>01.19",
+    "content": "updateの日付に入れられた改行タグはnunjucksのオートエスケープによって文字列として出力されます。<br>これを避けるには.njk側の記述でsafeを指定<br>し<br>ます。"
+  },
+  {
+    "slug": "page_4",
+    "title": "pageTitle_4",
+    "update": "2020.01.21",
+    "content": "こっそり追加されているページネーションですが、11ty v0.10.0から追加されました。front-matterに指定したpaginationの次のURLが格納されるようです。"
+  },
+  {
+    "slug": "page_5",
+    "title": "pageTitle_5",
+    "update": "2020.01.23",
+    "content": "11tyを使ってみて感じたのは、他のHTMLテンプレートエンジンよりももっと「データとスタイルは別の場所で管理」というような印象でした。JSONデータの書き方によって複数ページを書き出すことができ、さらにページネーションやマークダウンなどの形式まで、かなり幅広く対応することができます。<br>レイアウトの同じようなページを作成する上では強力なテンプレートエンジンなのではないかと考えます。"
+  }
+]

@@ -1,0 +1,26 @@
+---
+layout: layout.njk
+pagination:
+  data: content
+  size: 1
+  alias: content
+permalink: "pagination_sample/{{ content.slug | slug }}.html"
+---
+<article class="content">
+  <div class="content_infomation">
+    <h1 class="content_ttl">{{ content.title | safe }}</h1>
+    {{ auther | safe }}
+  </div>
+  <div class="content_txtArea">
+    <p class="content_txt">{{ content.update }}</p>
+    <p class="content_txt u-redBorder">{{ content.content | safe }}</p>
+  </div>
+
+  {% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}">前へ</a>
+  {% endif %}
+  {% if pagination.href.next %}
+  <a href="{{ pagination.href.next }}">次へ</a>
+  {% endif %}
+</article>
+
