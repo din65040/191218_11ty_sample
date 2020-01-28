@@ -4,16 +4,20 @@
     "clean/css": "rimraf dist/assets/css && mkdir -p dist/assets/css",
     "clean/js": "rimraf dist/js && mkdir -p dist/js",
     "clean/images": "rimraf dist/assets/images && midir -p dist/assets/images",
+
     "html/eleventy": "eleventy",
+
     "css/sass": "node-sass src/assets/scss/style.scss -o dist/assets/css --output-style expanded --source-map dist/assets/css",
     "css/postcss": "postcss dist/assets/css/style.css -o dist/assets/css/style.min.css",
     "css": "npm run clean/css && npm-run-all -p css/*",
+
     "build:js": "mkdirp dist/js && browserify -t babelify src/js/main.js | uglifyjs -c -m > dist/js/main.js",
     "js/rollup": "rollup src/assets/js/index.js -c=rollup.config.js",
     "js/uglifyjs": "uglifyjs dir/assets/js/index.js -o dir/assets/js/index.min.js",
     "js": "npm run clean/js && npm-run-all -s js/*",
     "build:images": "imagemin src/images/* -o dist/images",
     "images": "npm run clean/images && npm-run-all -s images/*",
+
     "watch/server": "eleventy --serve",
     "watch/css": "watch 'npm run css' ./src/assets/scss",
     "watch": "npm-run-all -p watch/*"
